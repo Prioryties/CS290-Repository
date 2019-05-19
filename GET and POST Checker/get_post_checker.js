@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 3000);
+app.set('port', 9049);
 
 app.get('/', function(req, res) {
 	var qParams = [];
@@ -44,5 +44,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(app.get('port'), function() {
-	console.log('Express started on http://localhost:' + app.get('port') + '; press Crtl-C to terminate.');
+	console.log('Express started on flip3.engr.oregonstate.edu' + app.get('port') + '; press Crtl-C to terminate.');
 });
