@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mangakyo</title>
+  </head>
+  <body>
+	<nav>
+		<a href="index.html">Home</a>
+		<a href="about-me.html">About Me</a>
+		<strong>Commissions</strong>
+		<a href="contact-me.html">Contact Me</a>
+	</nav>
+	<h1>Commissions</h1>
+	<h4>Example Format</h4>
+	<img src="images/blank_format.jpg" alt="A blank 6 panel manga format" style="width:572px;height:716px">
+	<form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php"
+	 method="get">
+		<p>How many pages do you want the manga to be? (6 panels per page)
+		 <input type="number" name="numerical_input">
+		</p>
+		<p>Choose the type of coloring you want:
+			<label>
+			 <input type="radio" name="color" value="Black&White" />Black & White</label>
+			<label>
+			 <input type="radio" name="color" value="Accents" />Accenting Color</label>
+			<label>
+			 <input type="radio" name="color" value="Full" />Full Color</label>
+		</p>
+		<p>(Optional) Upload a picture of yourself to use as a reference for the main character
+			<input type="file" name="pic" accept="image/*">
+			<input type="submit" value="Use Picture">
+		</p>
+		<p>Enter in some parameters for your story (e.g. setting, genre, main character's personality, etc.)<br>
+			<textarea rows="4" cols="50"></textarea>
+		</p>
+		<input type="submit" value="Submit Order" />
+		</form>
+		<script src="Project.js"></script>
+	</body>
+</html>

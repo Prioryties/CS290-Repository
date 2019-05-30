@@ -5,22 +5,30 @@ var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
-app.set('port', 9049);
+app.set('port', 3000);
 
 app.get('/home',function(req,res){
-  res.render('home');
+  res.render('index', function (err, html) {
+		res.send(html);
+	});
 });
 
 app.get('/contact-me',function(req,res){
-  res.render('contact-me');
+  res.render('contact-me', function (err, html) {
+		res.send(html);
+	});
 });
 
 app.get('/commissions',function(req,res){
-	res.render('commissions');
+	res.render('commissions', function (err, html) {
+		res.send(html);
+	});
 });
 
 app.get('/about-me',function(req,res){
-	res.render('about-me');
+	res.render('about-me', function (err, html) {
+		res.send(html);
+	});
 });
 
 app.use(function(req,res){
@@ -36,5 +44,5 @@ app.use(function(err, req, res, next){
 });
 
 app.listen(app.get('port'), function(){
-  console.log('Express started on flip3.engr.oregonstate.edu:9049/' + app.get('port') + '; press Ctrl-C to terminate.');
+  console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
 });
